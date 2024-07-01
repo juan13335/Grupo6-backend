@@ -11,5 +11,5 @@ def obtener_datos():
       cursor = con.cursor(dictionary=True)
    except Exception:
       con.connect()
-      cursor = con.cursor(dictionary=True)  
+      cursor = con.cursor(dictionary=True)
    return datos
