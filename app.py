@@ -1,6 +1,6 @@
 from flask import Flask
 from flask import jsonify
-from componentes.datos import obtener_datos
+from base_db.dml import obtener_datos
 
 app = Flask(__name__)
 
