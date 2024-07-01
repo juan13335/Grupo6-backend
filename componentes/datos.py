@@ -7,5 +7,9 @@ def obtener_datos():
    cursor.execute(consulta)
    datos = cursor.fetchall()
    con.close()
+   try:
+      cursor = con.cursor(dictionary=True)
+   except Exception:
+      con.connect()
+      cursor = con.cursor(dictionary=True)  
    return datos
-
