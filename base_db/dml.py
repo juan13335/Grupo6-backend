@@ -5,11 +5,12 @@ class Tabla:
         self.conexion = n_conexion
 
     @classmethod
-    def crear(cls):
-        pass
+    def crear(self, valores):
+        for campo, valor in zip(self.campos, valores):
+            setattr(self, campo, valor)
 
     @classmethod
-    def guardar_db(cls):
+    def guardar_db(self):
         pass
 
     @classmethod
@@ -34,3 +35,7 @@ class Tabla:
             cursor = cls.conexion.cursor()
 
         cursor.execute(consulta)
+        datos = cursor.fetchall()
+        # lista por comprehension
+        resultado = [cls(dato) for dato in datos]
+        return resultado
