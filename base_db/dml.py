@@ -4,12 +4,12 @@ class Tabla:
         self.campo = n_campo
         self.conexion = n_conexion
 
-    @classmethod
+    #@classmethod
     def crear(self, valores):
         for campo, valor in zip(self.campos, valores):
             setattr(self, campo, valor)
 
-    @classmethod
+    #@classmethod
     def guardar_db(self):
         pass
 
