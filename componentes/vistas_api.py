@@ -4,7 +4,7 @@ from main import app
 from componentes.modelos import Usuario
 #from componentes.modelos import Suscripcion
 
-@app.route('/usuarios', methods=['GET'])
+@app.route('/usuarios')
 def mostrar_usuarios():
     usuarios = Usuario.obtener() 
     print(f"Datos recuperados de la base de datos: {usuarios}") # Para verificar que devuelve
