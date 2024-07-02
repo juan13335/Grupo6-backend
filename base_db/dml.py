@@ -14,9 +14,14 @@ class Tabla:
         pass
 
     @classmethod
-    def obtener(cls):
-        consulta = f"SELECT * FROM {cls.tabla};"
-        return cls.__conectar(consulta)
+    def obtener(cls, campo=None, valor=None):
+        if campo == None or valor == None:
+            consulta = f"SELECT * FROM {cls.tabla};"
+            return cls.__conectar(consulta)
+        else:
+            consulta = (f"SELECT * FROM {cls.tabla}"
+                        f"WHERE {campo} = %s")
+            return cls.__conectar(consulta, (valor))
 
     @classmethod
     def actualizar_db(cls):
@@ -27,7 +32,7 @@ class Tabla:
         pass
 
     @classmethod
-    def __conectar(cls, consulta):
+    def __conectar(cls, consulta, datos=None):
         try:
             cursor = cls.conexion.cursor()
         except Exception as e:
@@ -36,6 +41,10 @@ class Tabla:
 
         cursor.execute(consulta)
         datos = cursor.fetchall()
-        # lista por comprehension
-        resultado = [cls(dato) for dato in datos]
+        if len(datos) == 1:
+            resultado = [cls(dato[0]) for dato in datos]
+        else:
+            resultado = [cls(dato) for dato in datos]
+
+        cls.conexion.close()
         return resultado

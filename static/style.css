@@ -1,0 +1,688 @@
+/* Fuente titulo */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+	font-family: "Playfair Display", serif;
+	box-sizing: border-box;
+	padding: 0px;
+	margin: 0;
+
+}
+
+body {
+	background-color: #e2e2e2;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2px 10px;
+	list-style: none;
+	border-color: black;
+	background-color: #111a35;
+	color:aliceblue;
+	/* padding:2%; */
+}
+
+.nav {
+	display: flex;
+}
+
+.h2-nav {
+	font-size: 20px;
+	padding: 2%;
+}
+
+.nav li {
+	display: inline-block;
+	padding: 0 20px;
+	position: relative;
+}
+
+.nav a {
+	text-decoration: none;
+	color: black;
+	font-size: 115%;
+	color:aliceblue;
+	cursor: pointer;
+}
+
+.nav a:hover {
+	color: red;
+}
+
+.nav li:hover ul {
+	display: block;
+}
+
+.nav ul {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #111a35;
+	z-index: 1;
+}
+
+.nav ul li {
+	padding: 15px 10px 7.5px 20px;
+	font-size: 80%;
+}
+
+.abrir-menu {
+	display: none;
+}
+
+.grid-container {
+	display: grid;
+	width: 100%; /*agregué el 100% por que sino no se ajustaba a la pagina */
+	grid-template-areas: 
+	'principal noticia2'
+	'principal noticia3';
+	margin: 15px 5px;
+	padding: 20px;
+	text-align: left;
+}
+
+.grid-container-deportes {
+	display: grid;
+	width: 90%; /*agregué el 100% por que sino no se ajustaba a la pagina */
+	grid-template-areas: 
+	'principal noticia2'
+	'principal noticia3'
+	'noticia4 noticia4';
+	margin:	auto;
+	padding: 15px;
+	text-align: left;
+	border-bottom: 1px solid black;
+}
+
+.d1 {
+	grid-area: principal;
+}
+
+.d2 {
+	grid-area: noticia2;
+}
+
+.d3 {
+	grid-area: noticia3;
+}
+
+.d4 {
+	grid-area: noticia4;
+}
+
+.titulo-deporte {
+	text-align: center;
+	font-size: 35px;
+	color: #111a35;
+	margin: auto;
+	border-bottom: 1px solid black;
+	width: 90%;
+	padding-bottom: 15px;
+}
+
+.box{
+	border: 1px solid black;
+	line-height: 20px;
+	margin: 5px;
+	background-color: white;
+	border-radius: 4px;
+}
+
+.box h2 {
+	font-size: 25px;
+}
+
+.box h2, p{
+	margin: 10px 15px;
+	padding: 10px 10px;
+	text-align: justify;
+}
+
+.box img {
+	max-width: 320px;
+	float: right;
+	margin: 16px 15px 0px 15px;
+}
+
+.btn {
+	display: inline-block;
+	height: 30px;
+	padding: 1px;
+	/* background-color: #4862FF; */
+	background-color: #aeb9fa;
+	width: 80px;
+	cursor: pointer;
+	border: 1px solid #0024FA;
+	margin: 10px 26px;
+}
+
+.btn a {
+	text-decoration: none;
+	font-size: 15px;
+	color: #000;
+}
+
+.btn:hover {
+	background-color: #6B80FF;
+}
+
+.n1 {
+	grid-area: principal;
+	max-width: 100%;  /* porque no se alinea al centro?? */
+}
+
+.n2 {
+	max-width: 100%;
+	grid-area: noticia2;
+}
+
+.n3 {
+	max-width: 100%;
+	grid-area: noticia3;
+}
+
+/* ERROR */
+
+.bsod-container{
+	padding: 3%;
+
+}
+
+/* CAROUSEL */
+.carousel {
+	position: relative;
+	max-width: 100%;
+	margin: auto;
+	width: 100%; /* Ajusta el ancho del carousel al 100% de la página */
+}
+  
+.slides {
+	display: flex;
+	overflow-x: hidden;
+	width: 100%; /* Ajusta el ancho del contenedor de las imágenes */
+
+}
+
+.slides img {
+	width: 100%; 
+	height: auto; /* Mantiene la proporción de aspecto */
+}
+
+.prev, .next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background-color: rgba(139, 69, 19, 0);
+	color: white;
+	padding: 10px;
+	border: none;
+	cursor: pointer;
+}
+  
+.prev {
+	left: 0;
+}
+  
+.next {
+	right: 0;
+}
+
+.overlay {  /*texto concé argentina */
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1; /* Asegura que el texto esté encima de las imágenes */
+}
+  
+.ad-link {   /*texto concé argentina */
+	color:	rgb(255, 255, 255);
+	font-size: 2.5rem;
+	text-decoration: none;
+	padding: 10px 20px;
+	background-color: rgba(77, 77, 77, 0);
+}
+
+
+
+
+/* dolar container */
+
+.dolar-container {
+	width: 100%;
+	height: 25%;
+	display: flex;
+	padding: 5px;
+	font-size: 1.5rem;
+	background-color: #76777c;
+
+}
+  
+.dolar-info {
+	flex-grow: 1;
+	display: flex;
+	padding: 5px;
+	color:#e2e2e2
+}
+  
+.dolar-price {
+	flex-grow: 1;
+	text-align: center;
+
+}
+  
+.dolar-label {
+	flex-grow: 1;
+	text-align: center;
+
+
+}
+/* videos index */
+
+.video-section {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+	background-color: #e2e2e2;
+	text-align: left;
+	margin: 20px;
+	font-size: 2rem;
+}
+
+.video-section-deportes {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+	background-color: #e2e2e2;
+	text-align: left;
+	margin: 20px auto;
+	font-size: 2rem;
+	width: 80%;
+
+}
+
+.video-section .h1{
+	color: #111a35;
+	margin-right: 10px;
+}
+
+.video-container {
+    margin: 3%; /* Espacio entre los videos */
+    
+}
+
+.video-container .video-section  {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+	margin: 4%;
+} 
+
+
+/* PAGINA ARGENTINA PUBLICIDAD */
+.container-box {
+    display: flex;
+	align-items: left;
+	background-color: #e2e2e2 ;
+}
+
+.nav-public{
+	background-color: #111a35;
+	padding: 2%;
+}
+
+.nav-public-deporte {
+	background-color: #111a35;
+	padding: 2%;
+}
+
+.nav-public-deporte a {
+	color: white;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+.nav-public-deporte a:hover {
+	color: red;
+}
+
+.nav-public a{
+	color:aliceblue;
+}
+
+.separador{
+	color:#ffffff;
+	text-align: center;
+	background-color: #76777c;
+	padding: 3%;
+	text-shadow: #111a35;
+}
+.regiones h1{
+	padding: 2%;
+	background-color:#e2e2e2  ;
+	font-size: 2rem;
+	color: #111a35;
+}
+
+.regiones p{
+	padding: 1%;
+}
+
+/*PÁGINA ERRORR*/
+.title-xl {
+    font-size: 7rem;
+	text-decoration: dashed;
+}
+
+.title-lg {
+    font-size: 4rem;
+}
+
+.title-md {
+    font-size: 3rem;
+}
+
+/*footer*/
+.color-footer{
+	background-color: #111a35;
+	padding: 0.5%;
+}
+
+.color-footer-deporte {
+	background-color: #111a35;
+	padding: 0.5%;
+}
+
+.p-footer{
+	text-align: center;
+	color:aliceblue
+}
+
+.p-footer a{
+	color: aliceblue;
+}
+
+.logo-redes{
+	padding: 3%; /* Espacio entre logos */
+}
+
+/* Puntos de corte */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    /*header { Anterior NAV
+        height: 5.5rem;
+		display: flex;
+        justify-content: space-between;
+		position:relative;
+		padding: 5%;
+    }*/
+
+	.nav {
+		flex-direction: column;
+		text-align: end;
+	}
+
+	
+	.titulo-deporte {
+		font-size: 20px;
+		margin-top: 20px;
+	}
+	
+
+	.nav-public {
+		padding: 3%;
+	}
+	
+    body {
+        align-items: center;
+    }
+
+	.overlay a {
+		font-size:25px;
+		text-align: center;
+	}
+
+	.dolar-container .dolar-label{
+		display: none;
+	}
+
+	.dolar-container .dolar-info{
+		font-size: small;
+		/* height: 1.5rem; */
+		text-align: center;
+	}
+
+	.titulo {
+		text-align: center;
+		font-size: 20px;
+	}
+
+	.video-section, .video-section-deportes{
+		display: inline;
+    	text-align: center;
+    	height: 200px;
+    	width: 300px;
+    	margin: 20px 10px;	
+	}
+	
+
+	.grid-container {
+		grid-template-areas: 
+	'principal'
+	'noticia2'
+	'noticia3';
+	
+	}
+
+	.grid-container-deportes {
+		grid-template-areas: 
+	'principal'
+	'noticia2'
+	'noticia3'
+	'noticia4';	
+		
+	}
+
+	.box img {
+		max-width: 280px;
+	}
+
+	.fila{
+		flex-direction: column;
+		background-color: #4862FF;
+		text-align:center;
+		text-shadow: 2px 1px 1px #40f3db;
+		/* font-size: 3em; */
+		}
+	.form-h2{
+		font-size:2em;
+	}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 600px) and (max-width:900px) {
+
+	.header{
+		display: flex;
+	}
+
+	main .carousel .overlay{
+		text-align: center;
+	}
+
+	.video-section{
+		display: inline;
+    	text-align: center;
+    	height: 350px;
+    	width: 400px;
+    	margin: 20px 10px;	
+	}
+	.grid-container {
+		grid-template-areas: 
+	'principal'
+	'noticia2'
+	'noticia3';
+	}
+}
+
+/* Large devices (laptops/desktops, 992px and up) 
+@media only screen and (min-width: 992px) {
+    header {
+        height: 5.5rem;
+    } 
+    /*header { 
+        height: 5.5rem; Pienso que no es necesario
+    }*/ 
+
+/* PAGINA CONTACTO */
+form {
+    background-image: url(/img/fondo-globo.jpg);
+	margin:7%;
+}
+
+form > h2{
+    text-align:center;
+    text-shadow: 3px 1px 2px #ffffff;
+    font-size: 3.2em;
+    padding:2%;
+}
+
+.row{
+    display: flex;  
+    justify-content: center;
+}
+
+.col{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:space-around;
+    padding:1em;
+}
+
+.form-input{
+    margin: 5px;
+}
+
+.form-input > label{
+    display: block;
+    font-weight: bold;
+    font-size:2.2em;
+    text-shadow: 2px 1px 2px #ffffff;
+}
+
+.form-input > input, select{
+    width: 100%;
+    height: 30px;
+    font-size: 1.4em;
+    vertical-align: middle;
+}
+
+.form-check{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+}
+
+.form-check legend  {
+    margin:0px 0px 10px 2px;    
+    font-size: 2.2em;
+    text-shadow: 2px 1px 2px #ffffff;
+    font-weight: bold;
+}
+
+.form-check > label {
+    margin:3px;
+    font-size:1.8em;
+    font-weight: bold;
+	text-shadow: 2px 1px 2px #ffffff;
+	padding:3px;
+	}
+
+.form-msg{  
+    font-size:2em;
+    font-weight: bold;
+    text-shadow: 2px 1px 2px #ffffff;
+    margin:35px 0px 10px 2px;
+}
+
+textarea{
+    width: 100%;
+    justify-content:center;
+    resize:none;
+    height: 100px;
+	margin-top: 2%;
+	
+}
+
+.row button{
+    margin-bottom: 20px;
+    font-size:1.8em;
+    font-weight: bold;
+    padding: 0.2em 0.2em;
+    box-shadow: 2px 2px 1px #000;
+    color:#111a35;
+}
+
+.row button:hover {
+    background-color: #111a35;
+    color: #e2e2e2;
+}
+
+/* Escritorio grande */
+/* @media only screen and (min-width: 992px) and (max-width: 1199px){   
+	
+} */
+
+/* Tablets y phablets */
+@media screen and (max-width:601px) and (max-width: 991px){
+    .row{
+        flex-direction:column;
+        text-align:center;
+        font-size: 1.2em;
+        }
+        .form-check legend{
+            font-size: 1.8em;       
+        }
+        .form-check > input {
+        justify-content:space-evenly;       
+        font-size:0.6m;
+    }
+}   
+
+/* Teléfonos */
+@media screen and (max-width:600px){
+    .row{
+        flex-direction: column;
+        margin-left: 40px;
+        margin-right: 40px;
+        /* background-color: #92a2fc; */
+        text-align:left;
+        font-size:0.8em;
+        }
+
+    .form-h2{
+        text-shadow: 2px 1px 1px #ced8d7;
+    }
+
+    .form-check > legend{
+        font-size:1.6em;        
+    }
+    
+    .form-check{
+        justify-content: center;        
+        font-size:1em;      
+        font-weight: bold;
+    }
+
+	.form-msg{
+		color: #0a0a0b;
+		text-shadow: 1px #ffffff;
+	}
+}
+

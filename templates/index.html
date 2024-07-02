@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">    
+    <link rel="icon" type="image/x-icon" href="/img/megafono.png">
+    <title>NOTICIAS YA!</title>
+</head>
+<body>
+    <header class="header">
+
+        <div class="h2-nav">
+            <h2>NoticiasYA!</h2>
+        </div>
+    
+        <nav>
+            <ul class = "nav">
+                <li ><a href="./sitio/contacto.html">Contacto</a></li>
+                <li >
+                    <a>Secciones</a> <!--borré el HREF porque llevaba a secciones => no existe -->
+                    <ul class="menu-desplegable">
+                        <li><a href="/sitio/deportes.html"><span class ="icon"></span>Deportes</a></li>
+                        <li><a href="/sitio/error.html">Investigacion</a></li>
+                        <li><a href="/sitio/error.html">Tecnologia</a></li>
+                    </ul>
+                </li>
+            </ul>   
+        </nav>
+        
+    </header>
+    <main>
+        <div class="carousel">
+
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <div class="slides">
+              <!-- <img src="/img/carosuel1.png" alt="Imagen 1 carousel"> -->
+              <img src="/img/carousel2.png" alt="Imagen 2 carousel">
+              <img src="/img/carousel3.png" alt="Imagen 3 carousel">
+              <img src="/img/carousel4.png" alt="Imagen 3 carousel">
+              <img src="/img/carousel5.png" alt="Imagen 3 carousel">
+            </div>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+            <div class="overlay">
+              <a href="/sitio/ArgentinaPublicidad.html" class="ad-link">CONOCÉ ARGENTINA</a>
+            </div>
+        </div>
+        <div class="dolar-container" style= "color: #111a35;">
+            <div class="dolar-info">
+              <div class="dolar-label">
+              <p>COTIZACIÓN DEL DÓLAR</p>
+              </div>  
+              <div class="dolar-price" id="blue">
+                <p>Dólar Blue: $1020,40</p> 
+              </div>
+              <div class="dolar-price" id="mep">
+                <p>Dólar MEP: $1069,02</p>
+              </div>
+            </div>
+        </div>
+
+        <div class="grid-container">
+            <div class="box n1">
+                <h2>Noticia del dia</h2>
+                <img src="./img/venta-de-autos-chocados-de-aseguradoras.jpg" alt="choque de autos">
+                <p>La SSN publicó el viernes en el Boletín Oficial una resolución que modifica el servicio de remolque que tenían las compañías aseguradoras en todo el ámbito de la República Argentina, y por la cual, desde ahora los seguros ya no podrán incluir en sus pólizas el servicio de remolque y auxilio mecánico a los usuarios. Únicamente en caso de siniestro por daño, incendio, robo o hurto, los gastos de traslado y estadía serán cubiertos por el asegurador. En cambio, ya no tendrá vigencia la cobertura que existía hasta ahora sobre “traslado, remolque, asistencia y/o estadía del vehículo asegurado por ningún motivo que no tenga vinculación con un accidente, incendio, robo y/o hurto”, expresa el texto oficial.</p>
+                <button class="btn"><a href="/sitio/error.html">Leer mas</a></button>
+            </div>
+            <div class="box n2">
+                <h2>Nuevos Avances en Medicina </h2>
+                <p>Científicos del Conicet avanzan en la búsqueda de proteínas para combatir el deterioro producido por el alzehimer. Los prometedores resultados serán compartidos en el IXX Congreso de Medicina Molecular.</p>
+                <button class="btn"><a href="/sitio/error.html">Leer mas</a></button>
+            </div>
+            <div class="box n3">
+                <h2>Tormenta Electromagnética</h2>
+                <p>Los cielos de la Antártida y la Patagonia se vieron teñidos de rosa, violeta y rojo el último fin de semana producto de un fenómeno que no sucedía desde 1865. 
+                   El fenómeno se conoce como "Auroras Australes". Se trata de la variación electromagnética que afecta los campos magnéticos en los polos norte y sur, formando estas increíbles figuras celestiales.Se esperan nuevas apariciones hasta el 15 de Mayo.
+                </p>
+                <button class="btn"><a href="/sitio/error.html">Leer mas</a></button>
+            </div>
+        </div>
+        
+        <div class="video-section">
+            <div class="titulo">
+                <h1 style= "color: #111a35;" > Reviví las últimas novedades en video</h1>
+            </div>
+            <div class="links">
+               <iframe class= "video-section" width="560" height="315" src="https://www.youtube.com/embed/dUcOsDtbMTs?si=7VlyVczGMXQ73ngh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe class= "video-section" width="560" height="315" src="https://www.youtube.com/embed/bVodnyheIQI?si=DRaJPpNnaTFDXa3A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+            </div>
+        </div>
+
+
+    </main>
+    <footer class="color-footer">
+            <!-- <li ><a href="#"><img src="./img/buscar-web.png" alt="Busqueda" height="20px"></a></li>
+            <li ><a href="#"><img src="./img/instagram1.png" alt="Instagram" height="20px">Instagram</a></li>
+            <li ><a href="#"><img src="./img/twitter.png" alt="Twitter" height="20px">Twitter</a></li>
+            <li ><a href="#"><img src="./img/whatsapp.png" alt="whatsapp" height="20px">Whatsapp</a></li> -->
+
+        <p class ="p-footer">Seguinos en redes</p>
+        <p class ="p-footer">
+            <a class="logo-redes" href="/sitio/error.html" target="_blank"><img src="/img/instagram.png" alt="WebSite" class="logo"></a>
+            <a class="logo-redes" href="/sitio/error.html" target="_blank"><img src="/img/facebook.png" alt="GitHub" class="logo"></a>
+            <a class="logo-redes" href="/sitio/error.html" target="_blank"><img src="/img/gorjeo.png" alt="LinkedIn" class="logo"></a>
+        </p>
+        <p class ="p-footer">Todos los derechos reservados - 2024</p>
+        <p class ="p-footer"><a href="/index.html">Volver arriba</a></p>
+        
+
+    </footer>
+
+    <script src="/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
