@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">    
+    <link rel="stylesheet" href="{{ url_for('static', filename='./styles/style.css') }}">    
     <link rel="icon" type="image/x-icon" href="/img/megafono.png">
     <title>NOTICIAS YA!</title>
 </head>
@@ -35,7 +35,7 @@
             <button class="prev" onclick="prevSlide()">&#10094;</button>
             <div class="slides">
               <!-- <img src="/img/carosuel1.png" alt="Imagen 1 carousel"> -->
-              <img src="/img/carousel2.png" alt="Imagen 2 carousel">
+              <img src="./static/img/carousel2.png" alt="Imagen 2 carousel">
               <img src="/img/carousel3.png" alt="Imagen 3 carousel">
               <img src="/img/carousel4.png" alt="Imagen 3 carousel">
               <img src="/img/carousel5.png" alt="Imagen 3 carousel">
@@ -63,10 +63,13 @@
 
         <div class="grid-container">
             <div class="box n1">
-                <h2>Noticia del dia</h2>
-                <img src="./img/venta-de-autos-chocados-de-aseguradoras.jpg" alt="choque de autos">
-                <p>La SSN publicó el viernes en el Boletín Oficial una resolución que modifica el servicio de remolque que tenían las compañías aseguradoras en todo el ámbito de la República Argentina, y por la cual, desde ahora los seguros ya no podrán incluir en sus pólizas el servicio de remolque y auxilio mecánico a los usuarios. Únicamente en caso de siniestro por daño, incendio, robo o hurto, los gastos de traslado y estadía serán cubiertos por el asegurador. En cambio, ya no tendrá vigencia la cobertura que existía hasta ahora sobre “traslado, remolque, asistencia y/o estadía del vehículo asegurado por ningún motivo que no tenga vinculación con un accidente, incendio, robo y/o hurto”, expresa el texto oficial.</p>
-                <button class="btn"><a href="/sitio/error.html">Leer mas</a></button>
+                <h2>Registro</h2>
+                <form action="#" method="POST">
+                    <input type="text" name="nombre" placeholder="Nombre" required>
+                    <input type="email" name="email" placeholder="Correo Electrónico" required>
+                    <input type="password" name="password" placeholder="Contraseña" required>
+                    <button type="submit">Registrarse</button>
+                </form>
             </div>
             <div class="box n2">
                 <h2>Nuevos Avances en Medicina </h2>
