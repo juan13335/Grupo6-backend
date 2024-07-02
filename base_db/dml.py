@@ -41,10 +41,7 @@ class Tabla:
 
         cursor.execute(consulta)
         datos = cursor.fetchall()
-        if len(datos) == 1:
-            resultado = [cls(dato[0]) for dato in datos]
-        else:
-            resultado = [cls(dato) for dato in datos]
-
+        print(f"Datos recuperados de la base de datos: {datos}")
+        resultado = [cls(dato) for dato in datos]
         cls.conexion.close()
         return resultado
